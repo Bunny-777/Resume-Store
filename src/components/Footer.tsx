@@ -1,16 +1,22 @@
-import React from 'react';
+interface FooterProps {
+  darkMode: boolean;
+}
 
-const Footer = () => {
+const Footer = ({ darkMode }: FooterProps) => {
   return (
-    <footer className="bg-black py-8">
+    <footer
+      className={`py-8 transition-colors duration-300 ${
+        darkMode ? "bg-black text-white" : "bg-gray-50 text-gray-900" // changed from bg-gray-100 to bg-gray-50
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 RyanCV. All Rights Reserved.
+          <div className={`${darkMode ? "text-gray-400" : "text-gray-600"} text-sm mb-4 md:mb-0`}>
+            © 2025 ryanCV. All Rights Reserved.
           </div>
-          
-          <div className="text-gray-400 text-sm">
-            Design by <span className="text-green-400 font-medium">bslthemes Team</span>
+
+          <div className={`${darkMode ? "text-gray-400" : "text-gray-600"} text-sm`}>
+            Design by <span className="text-green-400 font-medium">ryan</span>
           </div>
         </div>
       </div>

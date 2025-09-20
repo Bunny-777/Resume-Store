@@ -1,18 +1,25 @@
 import { Play } from "lucide-react";
 
-const Installation = () => {
+interface InstallationProps {
+  darkMode: boolean;
+}
+
+const Installation = ({ darkMode }: InstallationProps) => {
   return (
-    // Set min-height to screen height and use flexbox for centering
-    <section id="installation" className="bg-white min-h-screen flex items-center">
-      {/* Removed vertical padding (py-10) as flexbox now handles centering */}
+    <section
+      id="installation"
+      className={`py-20 transition-colors duration-300 ${
+        darkMode ? "bg-black text-white" : "bg-gray-100 text-gray-900"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         {/* Left content */}
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className={`text-4xl font-bold mb-4 ${darkMode ? "text-white" : "text-gray-900"}`}>
             Installation Guide
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className={`text-lg mb-8 ${darkMode ? "text-white/80" : "text-gray-600"}`}>
             How to install theme, all plugins & import demo content.
           </p>
           <button className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 shadow-md">

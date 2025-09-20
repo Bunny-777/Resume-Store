@@ -18,7 +18,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Grow your <span className="text-green-400">CV/Resume Website</span>
             <br />
-            to the Next Level with <span className="text-green-400">RyanCV</span>
+            to the Next Level with <span className="text-green-400">ryanCV</span>
           </h1>
           
           <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
